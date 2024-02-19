@@ -6,9 +6,11 @@
 # DeepSpeed Team
 OUTPUT=$1
 ZERO_STAGE=$2
+DATA_PATH=$3
+SFT_CKPT=$4
 
 if [ "$OUTPUT" == "" ]; then
-    OUTPUT=/cpfs/user/chennuo/CN/output/compress_memory/13b_v2_dpo_0.01_sft/
+    OUTPUT=output/compress_memory/13b_v2_dpo_0.01_sft/
 fi
 if [ "$ZERO_STAGE" == "" ]; then
     ZERO_STAGE=3
@@ -16,9 +18,9 @@ fi
 mkdir -p $OUTPUT
 
 deepspeed --include localhost:0,1,2,3,4,5,6,7 --master_port=29592 main.py  \
-   --data_path /cpfs/user/chennuo/dsChatLLama/test_data/results/pair_200_sample_dpo_source.json \
+   --data_path $DATA_PATH \
    --data_split 0,10,0 \
-   --model_name_or_path /cpfs/user/chennuo/CN/output/compress_memory/13b_v2/2023-12-28-00.12.51 \
+   --model_name_or_path $SFT_CKPT \
    --per_device_train_batch_size 1 \
    --per_device_eval_batch_size 2 \
    --max_seq_len 2048 \
