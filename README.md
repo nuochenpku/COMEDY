@@ -23,6 +23,10 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 ![](figures/comparison.png)
 
+COMEDY adopts a groundbreaking ''**One-for-All**'' approach, utilizing a single, unified model to manage the entire process from memory generation, compression to final response generation for long-term memory dialogue generation.
+
+
+
  - COMEDY firstly involves distilling session-specific memory from past dialogues, encompassing fine-grained session summaries, including event recaps, and detailed user and bot portraits; 
  
  - In a break from traditional systems, COMEDY eschews the use of a memory database for storing these insights. Instead, it reprocesses and condenses memories from all past interactions, forming a *Compressive Memory*. The first part is the **concise events** that have occurred throughout all the conversations, creating a historical narrative that the system can draw upon. The second and third parts consist of a **detailed user profile** and the **dynamic relationship changes** between the user and chatbot across sessions, both derived from past conversational events.
