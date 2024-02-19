@@ -2,10 +2,6 @@
 This is the official project of paper: Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations
 
 
-
-## News
-
-- [2024/01]  🔥 🔥 We add Mistral LLM  as our backbone, which achieves the SOTA results among open-source LLMs in Multilingual Math Reasoning, which achieves about **50.2** and **43.9** on MGSM and MSVAMP.
   
 
 # Overview
@@ -108,12 +104,17 @@ We introduce 🐙 MathOctopus, a series of open-source large language models (LL
 Clone this repository and install the required packages:
 
 ```bash
-git clone https://github.com/nuochenpku/MathOctopus.git
-cd MathOctopus
+git clone https://github.com/nuochenpku/COMEDY.git
+cd COMEDY
 pip install -r requirements.txt
 ```
 
 ## **Training and Inference**
+
+Our training strategies include two stage: **Mixed-task training** and **DPO Alignment**
+
+
+![](figures/training_strategy.png)
 
 ### **Data Loading**
 
@@ -148,6 +149,85 @@ input = alpaca_template.format(lang= language, query = query)
 output = pipeline(input)[0]['generated_text']
 print(output)
 ```
+
+### **Mix-Tasked Training**
+
+
+```bash
+bash run_step1.13B.sh
+```
+
+which consists of the following commands:
+
+
+```bash
+
+#!/bin/bash
+
+# DeepSpeed Team
+
+CURRENT_TIME=$(TZ=UTC-8 date +"%Y-%m-%d-%H.%M.%S")
+
+ZERO_STAGE="--zero_stage 2"
+
+MODEL_PATH=$1
+OUTPUT=$2
+LOG_PATH=$3
+
+export TOKENIZERS_PARALLELISM=False
+# export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
+
+# Reminder to shuffle train data in advance!
+TRN_FN=$4
+DEV_FN=$5
+
+TOTAL_SIZE=`wc -l ${TRN_FN}`
+echo "number of samples in trainset: ${TOTAL_SIZE}"
+
+mkdir -p $OUTPUT/$CURRENT_TIME
+deepspeed --include localhost:0,1,2,3,4,5,6,7 \
+--master_port 12390 \
+training/step1_supervised_finetuning/main.py \
+   --model_name_or_path ${MODEL_PATH} \
+   --train_data_path ${TRN_FN} \
+   --valid_data_path ${DEV_FN} \
+   --per_device_train_batch_size 4 \
+   --per_device_eval_batch_size 4 \
+   --data_output_path $OUTPUT/data \
+   --max_seq_len 2048 \
+   --learning_rate 1e-5  \
+   --weight_decay 0.1 \
+   --num_train_epochs 3 \
+   --num_train_samples ${TOTAL_SIZE} \
+   --gradient_accumulation_steps 1 \
+   --lr_scheduler_type cosine \
+   --num_warmup_steps 400 \
+   --seed 42 \
+   ${ZERO_STAGE} \
+   --save_interval 2000 \
+   --log_interval 100 \
+   --eval_interval 1000 \
+   --output_dir $OUTPUT/$CURRENT_TIME \
+   --gradient_checkpointing \
+   --tensorboard_path $LOG_PATH \
+   &>$OUTPUT/train.log&
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### **Evaluation**
 
