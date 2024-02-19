@@ -50,6 +50,8 @@ Our collected Dpolphin contain 3 tasks:
 - Memory Compression
 - Memory-Grounded Response Generation
 
+![](figures/datastatistics.png)
+
 
 ## Usage
 
@@ -100,7 +102,7 @@ Run the following command to preprocess the data, like:
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("https://huggingface.co/datasets/Mathoctopus/GSM8KInstruct_Parallel")
+dataset = load_dataset("Nuo97/Dolphin-DPO")
 ```
 
 ### **Quick Start**
@@ -110,19 +112,9 @@ To play with our model, run:
 # Use a pipeline as a high-level helper
 from transformers import pipeline
 
-pipe = pipeline("text-generation", model="Mathoctopus/Parallel_7B")
+pipe = pipeline("text-generation", model="Nuo97/COMEDY_7B")
 
-alpaca_template = "Below is an instruction that describes a task. Write a response that appropriately completes the request in {lang}. Please answer in {lang}. \n### Instruction:\n{query}\n\n### Response:"
-
-query = "Janet's ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
-
-
-
-### You can let MathOctopus output in a specific language.
-language = English
-
-input = alpaca_template.format(lang= language, query = query)
-
+input = string()
 output = pipeline(input)[0]['generated_text']
 print(output)
 ```
