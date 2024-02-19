@@ -197,7 +197,7 @@ training/step1_supervised_finetuning/main.py \
 ```
 
 
-### **Step2： DPO Alignmen**
+### **Step2： DPO Alignment**
 
 
 ```bash
