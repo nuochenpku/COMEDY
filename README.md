@@ -76,7 +76,8 @@ Our collected Dpolphin contain 3 tasks:
 - [📖 Citation](#citation)
 
 ## **Introduction**
-We introduce 🐙 MathOctopus, a series of open-source large language models (LLMs) specifically tailored for multilingual math problem-solving. The MathOctopus models are trained on 🤗 MGSM8KInstruct Dataset, encompassing ten distinct languages. MathOctopus notably outperforms conventional open-source LLMs and exhibits superiority over ChatGPT in few-shot scenarios.
+This work introduces a novel framework, COmpressive Memory-Enhanced Dialogue sYstems (COMEDY), which eschews traditional retrieval modules and memory databases. Instead, COMEDY adopts a "One-for-All" approach, utilizing a single language model to manage
+memory generation, compression, and response generation.
 
 ## **Installation**
 
@@ -276,14 +277,7 @@ We recruit human annotators to evaluate the model performances in terms of **Sco
 Please cite our paper if you use our data, model or code. Please also kindly cite the original dataset papers. 
 
 ```
-@misc{chen2023breaking,
-      title={Breaking Language Barriers in Multilingual Mathematical Reasoning: Insights and Observations}, 
-      author={Nuo Chen and Zinan Zheng and Ning Wu and Linjun Shou and Ming Gong and Yangqiu Song and Dongmei Zhang and Jia Li},
-      year={2023},
-      eprint={2310.20246},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
+
 ```
 
 
