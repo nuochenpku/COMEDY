@@ -46,9 +46,9 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 Our collected Dpolphin contain 3 tasks:
 
-- Session-Level Memory Summarization
-- Memory Compression
-- Memory-Grounded Response Generation
+- **Task1: Session-Level Memory Summarization**
+- **Task2: Memory Compression**
+- **Task3: Memory-Grounded Response Generation**
 
 ![](figures/datastatistics.png)
 
