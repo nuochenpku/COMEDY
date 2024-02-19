@@ -1,6 +1,10 @@
 # COMEDY
 This is the official project of paper: Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations
 
+<br>
+<div align="center">
+  <img src="figures/comedy.png" width="60%" title="Introduction Figure">
+</div>
 
   
 
@@ -33,19 +37,10 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 
 
-# 🐙🐙**MathOctopus** 🐙🐙
-This repo contains the code, data, and models for "[**Breaking Language Barriers in Multilingual Mathematical Reasoning: Insights and Observations**](https://arxiv.org/abs/2310.20246)"
 
-<div align="center">
- 🔥 🔥 🔥 Check out our <a href = "https://mathoctopus.github.io/">[Project Page]</a> for more results and analysis!
-</div>
 
-<br>
-<div align="center">
-  <img src="new_model.png" width="90%" title="Introduction Figure">
-</div>
 
-## Official Website
+
 
 ### 🤗Datasets 
 
@@ -56,7 +51,7 @@ Our collected Dpolphin contain 3 tasks:
 - Memory-Grounded Response Generation
 
 
-#### Usage
+## Usage
 
 <!--
 
@@ -100,7 +95,7 @@ Our training strategies include two stage: **Mixed-task training** and **DPO Ali
 
 ### **Data Loading**
 
-Run the following command to preprocess the data from our Instruct in the Parallel-training setting:
+Run the following command to preprocess the data, like:
 
 ```python
 from datasets import load_dataset
