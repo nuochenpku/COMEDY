@@ -16,7 +16,7 @@ This repository contains resources for accessing the official benchmarks, codes,
 This work pioneers exploring and building powerful Long-Term Conversation Dialogue Systems without ***retrieval***. To accomplish this, we make the following works:
 
 - **COMEDY**, LLM-based **CO**mpressive **M**emory-**E**nhanced **D**ialogue  s**Y**stems framework.
-- **Dolphin**, an large-scale instruction-tuning dataset from actual online user-chatbot interactions. This dataset contains three tasks: **Session-Level Memory Summarization**; **Memory Compression**; **Memory-Grounded Response Generation**, comprising an extensive collection of 100k samples.
+- **Dolphin**, the biggest Chinese long-term conversation  dataset from actual online user-chatbot interactions. This dataset contains three tasks: **Session-Level Memory Summarization**; **Memory Compression**; **Memory-Grounded Response Generation**, comprising an extensive collection of 100k samples.
 
 
 ## COMEDY VS. Retrieval-based Approaches
@@ -31,7 +31,7 @@ COMEDY adopts a groundbreaking ''**One-for-All**'' approach, utilizing a single,
  
  - In a break from traditional systems, COMEDY eschews the use of a memory database for storing these insights. Instead, it reprocesses and condenses memories from all past interactions, forming a *Compressive Memory*. The first part is the **concise events** that have occurred throughout all the conversations, creating a historical narrative that the system can draw upon. The second and third parts consist of a **detailed user profile** and the **dynamic relationship changes** between the user and chatbot across sessions, both derived from past conversational events.
 
-- Finally, COMEDY skillfully integrates this compressive memory into ongoing conversations, enabling contextually memory-enhanced interactions
+- Finally, COMEDY skillfully integrates this compressive memory into ongoing conversations, enabling contextually memory-enhanced interactions.
 
 
 
