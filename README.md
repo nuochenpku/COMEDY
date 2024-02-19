@@ -53,15 +53,27 @@ Our collected Dpolphin contain 3 tasks:
 ![](figures/datastatistics.png)
 
 
-## Usage
+## Usage & Download
+
+
+🤗 [**Dolphin-train Dataset**]
+
+🤗 [**Dolphin-DPO Dataset**](https://huggingface.co/datasets/Nuo97/Dolphin-DPO)
+
+🤗 [**Dolphin-Test Dataset**]
+
+🤗 [**COMEDY-7B**](https://huggingface.co/Nuo97/COMEDY_7B)
+
+🤗 [**COMEDY-13B-DPO**](https://huggingface.co/Nuo97/COMEDY_13B_DPO)
+
 
 <!--
 
-🤗 [MGSM8KInstruct_Parallel Dataset](https://huggingface.co/datasets/Mathoctopus/GSM8KInstruct_Parallel)
+🤗 [**Dolphin-train Dataset**]()
 
-🤗 [MGSM8KInstruct_Cross Dataset](https://huggingface.co/datasets/Mathoctopus/MGSM8KInstruct_Cross)
+🤗 [**Dolphin-DPO Dataset**](https://huggingface.co/datasets/Nuo97/Dolphin-DPO)
 
-🤗 [MSVAMP Dataset](https://huggingface.co/datasets/Mathoctopus/MSVAMP)
+🤗 [**Dolphin-Test Dataset**]()
 
 -->
 
