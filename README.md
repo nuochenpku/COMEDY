@@ -2,6 +2,12 @@
 This is the official project of paper: Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations
 
 
+
+## News
+
+- [2024/01]  🔥 🔥 We add Mistral LLM  as our backbone, which achieves the SOTA results among open-source LLMs in Multilingual Math Reasoning, which achieves about **50.2** and **43.9** on MGSM and MSVAMP.
+  
+
 # Overview
 
 This repository contains resources for accessing the official benchmarks, codes, and checkpoints of the paper: "[**Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations**]".
@@ -15,7 +21,7 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 ## COMEDY VS. Retrieval-based Approaches
 
-
+![](figures/comparison.png)
 
  - COMEDY firstly involves distilling session-specific memory from past dialogues, encompassing fine-grained session summaries, including event recaps, and detailed user and bot portraits; 
  
@@ -28,9 +34,6 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 
 
-## News
-
-- [2024/01]  🔥 🔥 We add Mistral LLM  as our backbone, which achieves the SOTA results among open-source LLMs in Multilingual Math Reasoning, which achieves about **50.2** and **43.9** on MGSM and MSVAMP.
 
 
 
