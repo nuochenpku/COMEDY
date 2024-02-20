@@ -293,7 +293,14 @@ We recruit human annotators to evaluate the model performances in terms of **Sco
 Please cite our paper if you use our data, model or code. Please also kindly cite the original dataset papers. 
 
 ```
-
+@misc{chen2024compress,
+      title={Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations}, 
+      author={Nuo Chen and Hongguang Li and Juhua Huang and Baoyuan Wang and Jia Li},
+      year={2024},
+      eprint={2402.11975},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 
