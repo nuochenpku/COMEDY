@@ -1,5 +1,5 @@
 # COMEDY
-This is the official project of paper: Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations
+This is the official project of paper: [**Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations**](https://arxiv.org/abs/2402.11975)
 
 <br>
 <div align="center">
@@ -10,7 +10,7 @@ This is the official project of paper: Compress to Impress: Unleashing the Poten
 
 # Overview
 
-This repository contains resources for accessing the official benchmarks, codes, and checkpoints of the paper: "[**Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations**]".
+This repository contains resources for accessing the official benchmarks, codes, and checkpoints of the paper: "[**Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations**](https://arxiv.org/abs/2402.11975)".
 
 
 This work pioneers exploring and building powerful Long-Term Conversation Dialogue Systems without ***retrieval***. To accomplish this, we make the following works:
