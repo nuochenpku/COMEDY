@@ -60,7 +60,7 @@ Our collected Dpolphin contain 3 tasks:
 ## Usage & Download
 
 
-🤗 [**Dolphin-train Dataset**]
+🤗 [**Dolphin-train Dataset**](https://huggingface.co/Nuo97)
 
 🤗 [**Dolphin-DPO Dataset**](https://huggingface.co/datasets/Nuo97/Dolphin-DPO)
 
