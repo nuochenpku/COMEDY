@@ -21,7 +21,7 @@ This work pioneers exploring and building powerful Long-Term Conversation Dialog
 
 ## COMEDY VS. Retrieval-based Approaches
 
-![](figures/comparison.png)
+![](figures/COMEDY_SCREENSHOT.png)
 
 COMEDY adopts a groundbreaking ''**One-for-All**'' approach, utilizing a single, unified model to manage the entire process from memory generation, compression to final response generation for long-term memory dialogue generation.
 
