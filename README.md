@@ -132,7 +132,7 @@ from transformers import pipeline
 pipe = pipeline("text-generation", model="Nuo97/COMEDY_7B")
 
 input = string()
-output = pipeline(input)[0]['generated_text']
+output = pipe(input)[0]['generated_text']
 print(output)
 ```
 
